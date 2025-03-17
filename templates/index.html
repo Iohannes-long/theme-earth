@@ -6,6 +6,7 @@
   <th:block th:fragment="content">
     <th:block th:replace="~{modules/category-filter}" />
 
+    <!-- 
     <div
       id="post-list"
       th:if="${posts.total gt 0}"
@@ -13,6 +14,7 @@
       class="mt-6 grid grid-cols-1 gap-6"
       th:classappend="|${list_layout == 'grid_3' ? 'md:grid-cols-2 xl:grid-cols-3' : ''} ${list_layout == 'grid_2' ? 'md:grid-cols-2' : ''}|"
     >
+    -->
       <th:block th:each="post : ${postItems}">
         <th:block
           th:replace="~{modules/post-card :: post-card(${post},true,true,true,${list_layout == 'single' ? 'column' : 'row'})}"
